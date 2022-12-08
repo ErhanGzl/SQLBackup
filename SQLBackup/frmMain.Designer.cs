@@ -36,32 +36,33 @@ namespace SQLBackup
             this.cnt_Menu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.ctn_Menu_Cikis = new System.Windows.Forms.ToolStripMenuItem();
             this.txt_YedeklenecekLokasyon = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lbl_YedeklenecekLokasyon = new System.Windows.Forms.Label();
+            this.lbl_SQLBaglanti = new System.Windows.Forms.Label();
             this.txt_Connection = new System.Windows.Forms.TextBox();
             this.dateTimePicker_CalismaZamani = new System.Windows.Forms.DateTimePicker();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lbl_PlanlananSaat = new System.Windows.Forms.Label();
             this.btn_KaydetBaslat = new System.Windows.Forms.Button();
             this.lbl_KalanSure = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lbl_YedeklemeKalanSure = new System.Windows.Forms.Label();
             this.timer_Zamanlayici = new System.Windows.Forms.Timer(this.components);
             this.btn_KayitYeri = new System.Windows.Forms.Button();
             this.cmb_Server = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lbl_VeritabaniSunucusu = new System.Windows.Forms.Label();
+            this.lbl_Veritabani = new System.Windows.Forms.Label();
             this.lst_PlanlananSaatler = new System.Windows.Forms.ListBox();
             this.btn_Ekle = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lbl_PlanlanmisSaatler = new System.Windows.Forms.Label();
             this.chk_WindowsAuthentication = new System.Windows.Forms.CheckBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lbl_KullaniciAdi = new System.Windows.Forms.Label();
+            this.lbl_Sifre = new System.Windows.Forms.Label();
             this.txt_KullaniciAdi = new System.Windows.Forms.TextBox();
             this.txt_Sifre = new System.Windows.Forms.TextBox();
             this.btn_Kopyala = new System.Windows.Forms.Button();
             this.linkLabel_Katilim = new System.Windows.Forms.LinkLabel();
-            this.label10 = new System.Windows.Forms.Label();
+            this.lbl_Dil = new System.Windows.Forms.Label();
             this.cmb_UygulamaDili = new System.Windows.Forms.ComboBox();
             this.cmb_Database = new PresentationControls.CheckBoxComboBox();
+            this.chk_Windows_baslata_ekle = new System.Windows.Forms.CheckBox();
             this.cnt_Menu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -95,23 +96,23 @@ namespace SQLBackup
             this.txt_YedeklenecekLokasyon.Size = new System.Drawing.Size(241, 20);
             this.txt_YedeklenecekLokasyon.TabIndex = 0;
             // 
-            // label1
+            // lbl_YedeklenecekLokasyon
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 438);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(125, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Yedeklenecek Lokasyon";
+            this.lbl_YedeklenecekLokasyon.AutoSize = true;
+            this.lbl_YedeklenecekLokasyon.Location = new System.Drawing.Point(12, 438);
+            this.lbl_YedeklenecekLokasyon.Name = "lbl_YedeklenecekLokasyon";
+            this.lbl_YedeklenecekLokasyon.Size = new System.Drawing.Size(125, 13);
+            this.lbl_YedeklenecekLokasyon.TabIndex = 1;
+            this.lbl_YedeklenecekLokasyon.Text = "Yedeklenecek Lokasyon";
             // 
-            // label3
+            // lbl_SQLBaglanti
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 380);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(162, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "SQL Bağlantı (Connection String)";
+            this.lbl_SQLBaglanti.AutoSize = true;
+            this.lbl_SQLBaglanti.Location = new System.Drawing.Point(12, 380);
+            this.lbl_SQLBaglanti.Name = "lbl_SQLBaglanti";
+            this.lbl_SQLBaglanti.Size = new System.Drawing.Size(162, 13);
+            this.lbl_SQLBaglanti.TabIndex = 5;
+            this.lbl_SQLBaglanti.Text = "SQL Bağlantı (Connection String)";
             // 
             // txt_Connection
             // 
@@ -131,18 +132,18 @@ namespace SQLBackup
             this.dateTimePicker_CalismaZamani.Size = new System.Drawing.Size(59, 20);
             this.dateTimePicker_CalismaZamani.TabIndex = 6;
             // 
-            // label4
+            // lbl_PlanlananSaat
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 320);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 13);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Planan Saat";
+            this.lbl_PlanlananSaat.AutoSize = true;
+            this.lbl_PlanlananSaat.Location = new System.Drawing.Point(12, 320);
+            this.lbl_PlanlananSaat.Name = "lbl_PlanlananSaat";
+            this.lbl_PlanlananSaat.Size = new System.Drawing.Size(65, 13);
+            this.lbl_PlanlananSaat.TabIndex = 7;
+            this.lbl_PlanlananSaat.Text = "Planan Saat";
             // 
             // btn_KaydetBaslat
             // 
-            this.btn_KaydetBaslat.Location = new System.Drawing.Point(165, 492);
+            this.btn_KaydetBaslat.Location = new System.Drawing.Point(165, 510);
             this.btn_KaydetBaslat.Name = "btn_KaydetBaslat";
             this.btn_KaydetBaslat.Size = new System.Drawing.Size(126, 23);
             this.btn_KaydetBaslat.TabIndex = 8;
@@ -161,15 +162,15 @@ namespace SQLBackup
             this.lbl_KalanSure.Text = "00:00";
             this.lbl_KalanSure.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label6
+            // lbl_YedeklemeKalanSure
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(10, 5);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(256, 24);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Yedekleme için kalan süre";
+            this.lbl_YedeklemeKalanSure.AutoSize = true;
+            this.lbl_YedeklemeKalanSure.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl_YedeklemeKalanSure.Location = new System.Drawing.Point(10, 5);
+            this.lbl_YedeklemeKalanSure.Name = "lbl_YedeklemeKalanSure";
+            this.lbl_YedeklemeKalanSure.Size = new System.Drawing.Size(256, 24);
+            this.lbl_YedeklemeKalanSure.TabIndex = 10;
+            this.lbl_YedeklemeKalanSure.Text = "Yedekleme için kalan süre";
             // 
             // timer_Zamanlayici
             // 
@@ -196,23 +197,23 @@ namespace SQLBackup
             this.cmb_Server.TabIndex = 12;
             this.cmb_Server.SelectedIndexChanged += new System.EventHandler(this.cmb_Server_SelectedIndexChanged);
             // 
-            // label2
+            // lbl_VeritabaniSunucusu
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 125);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 13);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Veritabanı Sunucusu";
+            this.lbl_VeritabaniSunucusu.AutoSize = true;
+            this.lbl_VeritabaniSunucusu.Location = new System.Drawing.Point(12, 125);
+            this.lbl_VeritabaniSunucusu.Name = "lbl_VeritabaniSunucusu";
+            this.lbl_VeritabaniSunucusu.Size = new System.Drawing.Size(105, 13);
+            this.lbl_VeritabaniSunucusu.TabIndex = 13;
+            this.lbl_VeritabaniSunucusu.Text = "Veritabanı Sunucusu";
             // 
-            // label5
+            // lbl_Veritabani
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 173);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(54, 13);
-            this.label5.TabIndex = 15;
-            this.label5.Text = "Veritabanı";
+            this.lbl_Veritabani.AutoSize = true;
+            this.lbl_Veritabani.Location = new System.Drawing.Point(12, 173);
+            this.lbl_Veritabani.Name = "lbl_Veritabani";
+            this.lbl_Veritabani.Size = new System.Drawing.Size(54, 13);
+            this.lbl_Veritabani.TabIndex = 15;
+            this.lbl_Veritabani.Text = "Veritabanı";
             // 
             // lst_PlanlananSaatler
             // 
@@ -234,14 +235,14 @@ namespace SQLBackup
             this.btn_Ekle.UseVisualStyleBackColor = true;
             this.btn_Ekle.Click += new System.EventHandler(this.btn_Ekle_Click);
             // 
-            // label7
+            // lbl_PlanlanmisSaatler
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(143, 301);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(90, 13);
-            this.label7.TabIndex = 18;
-            this.label7.Text = "Planlanan Saatler";
+            this.lbl_PlanlanmisSaatler.AutoSize = true;
+            this.lbl_PlanlanmisSaatler.Location = new System.Drawing.Point(143, 301);
+            this.lbl_PlanlanmisSaatler.Name = "lbl_PlanlanmisSaatler";
+            this.lbl_PlanlanmisSaatler.Size = new System.Drawing.Size(93, 13);
+            this.lbl_PlanlanmisSaatler.TabIndex = 18;
+            this.lbl_PlanlanmisSaatler.Text = "Planlanmış Saatler";
             // 
             // chk_WindowsAuthentication
             // 
@@ -256,23 +257,23 @@ namespace SQLBackup
             this.chk_WindowsAuthentication.UseVisualStyleBackColor = true;
             this.chk_WindowsAuthentication.CheckedChanged += new System.EventHandler(this.chk_WindowsAuthentication_CheckedChanged);
             // 
-            // label8
+            // lbl_KullaniciAdi
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(12, 252);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(64, 13);
-            this.label8.TabIndex = 20;
-            this.label8.Text = "Kullanıcı Adı";
+            this.lbl_KullaniciAdi.AutoSize = true;
+            this.lbl_KullaniciAdi.Location = new System.Drawing.Point(12, 252);
+            this.lbl_KullaniciAdi.Name = "lbl_KullaniciAdi";
+            this.lbl_KullaniciAdi.Size = new System.Drawing.Size(64, 13);
+            this.lbl_KullaniciAdi.TabIndex = 20;
+            this.lbl_KullaniciAdi.Text = "Kullanıcı Adı";
             // 
-            // label9
+            // lbl_Sifre
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(143, 252);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(28, 13);
-            this.label9.TabIndex = 21;
-            this.label9.Text = "Şifre";
+            this.lbl_Sifre.AutoSize = true;
+            this.lbl_Sifre.Location = new System.Drawing.Point(143, 252);
+            this.lbl_Sifre.Name = "lbl_Sifre";
+            this.lbl_Sifre.Size = new System.Drawing.Size(28, 13);
+            this.lbl_Sifre.TabIndex = 21;
+            this.lbl_Sifre.Text = "Şifre";
             // 
             // txt_KullaniciAdi
             // 
@@ -310,7 +311,7 @@ namespace SQLBackup
             // 
             this.linkLabel_Katilim.AutoSize = true;
             this.linkLabel_Katilim.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.linkLabel_Katilim.Location = new System.Drawing.Point(9, 494);
+            this.linkLabel_Katilim.Location = new System.Drawing.Point(9, 512);
             this.linkLabel_Katilim.Name = "linkLabel_Katilim";
             this.linkLabel_Katilim.Size = new System.Drawing.Size(118, 18);
             this.linkLabel_Katilim.TabIndex = 25;
@@ -318,14 +319,14 @@ namespace SQLBackup
             this.linkLabel_Katilim.Text = "Uygulama Hakkında";
             this.linkLabel_Katilim.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_Katilim_LinkClicked);
             // 
-            // label10
+            // lbl_Dil
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(12, 96);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(71, 13);
-            this.label10.TabIndex = 26;
-            this.label10.Text = "Uygulama Dili";
+            this.lbl_Dil.AutoSize = true;
+            this.lbl_Dil.Location = new System.Drawing.Point(12, 96);
+            this.lbl_Dil.Name = "lbl_Dil";
+            this.lbl_Dil.Size = new System.Drawing.Size(19, 13);
+            this.lbl_Dil.TabIndex = 26;
+            this.lbl_Dil.Text = "Dil";
             // 
             // cmb_UygulamaDili
             // 
@@ -334,9 +335,9 @@ namespace SQLBackup
             this.cmb_UygulamaDili.Items.AddRange(new object[] {
             "English",
             "Turkish"});
-            this.cmb_UygulamaDili.Location = new System.Drawing.Point(127, 92);
+            this.cmb_UygulamaDili.Location = new System.Drawing.Point(113, 93);
             this.cmb_UygulamaDili.Name = "cmb_UygulamaDili";
-            this.cmb_UygulamaDili.Size = new System.Drawing.Size(121, 21);
+            this.cmb_UygulamaDili.Size = new System.Drawing.Size(139, 21);
             this.cmb_UygulamaDili.TabIndex = 27;
             this.cmb_UygulamaDili.SelectedValueChanged += new System.EventHandler(this.cmb_UygulamaDili_SelectedValueChanged);
             // 
@@ -350,37 +351,49 @@ namespace SQLBackup
             this.cmb_Database.Name = "cmb_Database";
             this.cmb_Database.Size = new System.Drawing.Size(237, 21);
             this.cmb_Database.TabIndex = 28;
+            this.cmb_Database.SelectedIndexChanged += new System.EventHandler(this.cmb_Database_SelectedIndexChanged);
+            // 
+            // chk_Windows_baslata_ekle
+            // 
+            this.chk_Windows_baslata_ekle.AutoSize = true;
+            this.chk_Windows_baslata_ekle.Location = new System.Drawing.Point(13, 488);
+            this.chk_Windows_baslata_ekle.Name = "chk_Windows_baslata_ekle";
+            this.chk_Windows_baslata_ekle.Size = new System.Drawing.Size(198, 17);
+            this.chk_Windows_baslata_ekle.TabIndex = 29;
+            this.chk_Windows_baslata_ekle.Text = "Bilgisayarın açılışında otomatik başlat";
+            this.chk_Windows_baslata_ekle.UseVisualStyleBackColor = true;
             // 
             // frmSQLYedekleme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(301, 519);
+            this.ClientSize = new System.Drawing.Size(301, 537);
+            this.Controls.Add(this.chk_Windows_baslata_ekle);
             this.Controls.Add(this.cmb_Database);
             this.Controls.Add(this.cmb_UygulamaDili);
-            this.Controls.Add(this.label10);
+            this.Controls.Add(this.lbl_Dil);
             this.Controls.Add(this.linkLabel_Katilim);
             this.Controls.Add(this.btn_Kopyala);
             this.Controls.Add(this.txt_Sifre);
             this.Controls.Add(this.txt_KullaniciAdi);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.lbl_Sifre);
+            this.Controls.Add(this.lbl_KullaniciAdi);
             this.Controls.Add(this.chk_WindowsAuthentication);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.lbl_PlanlanmisSaatler);
             this.Controls.Add(this.btn_Ekle);
             this.Controls.Add(this.lst_PlanlananSaatler);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lbl_Veritabani);
+            this.Controls.Add(this.lbl_VeritabaniSunucusu);
             this.Controls.Add(this.cmb_Server);
             this.Controls.Add(this.btn_KayitYeri);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lbl_YedeklemeKalanSure);
             this.Controls.Add(this.lbl_KalanSure);
             this.Controls.Add(this.btn_KaydetBaslat);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lbl_PlanlananSaat);
             this.Controls.Add(this.dateTimePicker_CalismaZamani);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lbl_SQLBaglanti);
             this.Controls.Add(this.txt_Connection);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbl_YedeklenecekLokasyon);
             this.Controls.Add(this.txt_YedeklenecekLokasyon);
             this.HelpButton = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -403,34 +416,35 @@ namespace SQLBackup
 
         private System.Windows.Forms.NotifyIcon SQLYedek_Icon;
         private System.Windows.Forms.TextBox txt_YedeklenecekLokasyon;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbl_YedeklenecekLokasyon;
+        private System.Windows.Forms.Label lbl_SQLBaglanti;
         private System.Windows.Forms.TextBox txt_Connection;
         private System.Windows.Forms.DateTimePicker dateTimePicker_CalismaZamani;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbl_PlanlananSaat;
         private System.Windows.Forms.Button btn_KaydetBaslat;
         private System.Windows.Forms.Label lbl_KalanSure;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lbl_YedeklemeKalanSure;
         private System.Windows.Forms.Timer timer_Zamanlayici;
         private System.Windows.Forms.Button btn_KayitYeri;
         private System.Windows.Forms.ComboBox cmb_Server;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lbl_VeritabaniSunucusu;
+        private System.Windows.Forms.Label lbl_Veritabani;
         private System.Windows.Forms.ListBox lst_PlanlananSaatler;
         private System.Windows.Forms.Button btn_Ekle;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lbl_PlanlanmisSaatler;
         private System.Windows.Forms.ContextMenuStrip cnt_Menu;
         private System.Windows.Forms.ToolStripMenuItem ctn_Menu_Cikis;
         private System.Windows.Forms.CheckBox chk_WindowsAuthentication;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lbl_KullaniciAdi;
+        private System.Windows.Forms.Label lbl_Sifre;
         private System.Windows.Forms.TextBox txt_KullaniciAdi;
         private System.Windows.Forms.TextBox txt_Sifre;
         private System.Windows.Forms.Button btn_Kopyala;
         private System.Windows.Forms.LinkLabel linkLabel_Katilim;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lbl_Dil;
         private System.Windows.Forms.ComboBox cmb_UygulamaDili;
         private PresentationControls.CheckBoxComboBox cmb_Database;
+        private System.Windows.Forms.CheckBox chk_Windows_baslata_ekle;
     }
 }
 

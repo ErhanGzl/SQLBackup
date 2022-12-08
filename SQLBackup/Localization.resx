@@ -123,6 +123,9 @@
   <data name="Baslik" xml:space="preserve">
     <value>SQL Kolay Yedekleme</value>
   </data>
+  <data name="Destek" xml:space="preserve">
+    <value>Destek</value>
+  </data>
   <data name="Ekle" xml:space="preserve">
     <value>Ekle</value>
   </data>
@@ -135,11 +138,20 @@
   <data name="PlanlananSaat" xml:space="preserve">
     <value>Planan Saat</value>
   </data>
-  <data name="PlanlananSaatler" xml:space="preserve">
-    <value>Planlanan Saatler</value>
+  <data name="PlanlanmisSaatler" xml:space="preserve">
+    <value>Planlanmış Saatler</value>
   </data>
   <data name="SaatFormati" xml:space="preserve">
     <value>h'sa 'm'dk 's's'</value>
+  </data>
+  <data name="SQLBaglanti" xml:space="preserve">
+    <value>SQL Bağlantı (Connection String)</value>
+  </data>
+  <data name="SQLKolayYedekleme" xml:space="preserve">
+    <value>SQL Kolay Yedekleme</value>
+  </data>
+  <data name="SQLKolayYedeklemeClisiyor" xml:space="preserve">
+    <value>SQL Kolay Yedekleme Çalışıyor</value>
   </data>
   <data name="SQLKullaniciAdi" xml:space="preserve">
     <value>Kullanıcı Adı</value>
@@ -155,6 +167,12 @@
   </data>
   <data name="VeritabaniSunucusu" xml:space="preserve">
     <value>Veritabanı Sunucusu</value>
+  </data>
+  <data name="WindowsAuthentication" xml:space="preserve">
+    <value>Windows Oturumu (Windows Authentication)</value>
+  </data>
+  <data name="WindowsBaslangicaEkle" xml:space="preserve">
+    <value>Bilgisayarın açılışında otomatik başlat</value>
   </data>
   <data name="YedeklemeicinKalanSure" xml:space="preserve">
     <value>Yedekleme için kalan süre</value>

@@ -123,6 +123,9 @@
   <data name="Baslik" xml:space="preserve">
     <value>SQL Easy Backup</value>
   </data>
+  <data name="Destek" xml:space="preserve">
+    <value>Support</value>
+  </data>
   <data name="Ekle" xml:space="preserve">
     <value>Add</value>
   </data>
@@ -135,11 +138,20 @@
   <data name="PlanlananSaat" xml:space="preserve">
     <value>Scheduled Time</value>
   </data>
-  <data name="PlanlananSaatler" xml:space="preserve">
+  <data name="PlanlanmisSaatler" xml:space="preserve">
     <value>Scheduled Hours</value>
   </data>
   <data name="SaatFormati" xml:space="preserve">
     <value>h'ho 'm'mi 's'sec'</value>
+  </data>
+  <data name="SQLBaglanti" xml:space="preserve">
+    <value>Connection String</value>
+  </data>
+  <data name="SQLKolayYedekleme" xml:space="preserve">
+    <value>SQL Easy Backup</value>
+  </data>
+  <data name="SQLKolayYedeklemeClisiyor" xml:space="preserve">
+    <value>SQL Easy Backup Running</value>
   </data>
   <data name="SQLKullaniciAdi" xml:space="preserve">
     <value>User Name</value>
@@ -148,13 +160,19 @@
     <value>Password</value>
   </data>
   <data name="UygulamaDili" xml:space="preserve">
-    <value>Application Language</value>
+    <value>Language</value>
   </data>
   <data name="Veritabani" xml:space="preserve">
     <value>Database</value>
   </data>
   <data name="VeritabaniSunucusu" xml:space="preserve">
     <value>Server</value>
+  </data>
+  <data name="WindowsAuthentication" xml:space="preserve">
+    <value>Windows Authentication</value>
+  </data>
+  <data name="WindowsBaslangicaEkle" xml:space="preserve">
+    <value>Set Startup Programs</value>
   </data>
   <data name="YedeklemeicinKalanSure" xml:space="preserve">
     <value>Time remaining for backup</value>

@@ -79,6 +79,15 @@ namespace SQLBackup {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Destek.
+        /// </summary>
+        internal static string Destek {
+            get {
+                return ResourceManager.GetString("Destek", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Ekle.
         /// </summary>
         internal static string Ekle {
@@ -115,11 +124,11 @@ namespace SQLBackup {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Planlanan Saatler.
+        ///   Looks up a localized string similar to Planlanmış Saatler.
         /// </summary>
-        internal static string PlanlananSaatler {
+        internal static string PlanlanmisSaatler {
             get {
-                return ResourceManager.GetString("PlanlananSaatler", resourceCulture);
+                return ResourceManager.GetString("PlanlanmisSaatler", resourceCulture);
             }
         }
         
@@ -129,6 +138,33 @@ namespace SQLBackup {
         internal static string SaatFormati {
             get {
                 return ResourceManager.GetString("SaatFormati", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SQL Bağlantı (Connection String).
+        /// </summary>
+        internal static string SQLBaglanti {
+            get {
+                return ResourceManager.GetString("SQLBaglanti", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SQL Kolay Yedekleme.
+        /// </summary>
+        internal static string SQLKolayYedekleme {
+            get {
+                return ResourceManager.GetString("SQLKolayYedekleme", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SQL Kolay Yedekleme Çalışıyor.
+        /// </summary>
+        internal static string SQLKolayYedeklemeClisiyor {
+            get {
+                return ResourceManager.GetString("SQLKolayYedeklemeClisiyor", resourceCulture);
             }
         }
         
@@ -174,6 +210,24 @@ namespace SQLBackup {
         internal static string VeritabaniSunucusu {
             get {
                 return ResourceManager.GetString("VeritabaniSunucusu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Windows Oturumu (Windows Authentication).
+        /// </summary>
+        internal static string WindowsAuthentication {
+            get {
+                return ResourceManager.GetString("WindowsAuthentication", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bilgisayarın açılışında otomatik başlat.
+        /// </summary>
+        internal static string WindowsBaslangicaEkle {
+            get {
+                return ResourceManager.GetString("WindowsBaslangicaEkle", resourceCulture);
             }
         }
         

@@ -107,9 +107,18 @@ namespace SQLBackup
                     return;
                 }
             }
+
+            if (chk_Windows_baslata_ekle.Checked)
+            {
+                // Uygulamayı windows açılışına ekle
+                RegistryKey rk = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
+                if (rk.GetValue("SQLBackup") == null)
+                    rk.SetValue("SQLBackup", Application.ExecutablePath);
+            }
+
             if (SQLBaglantiTest())
             {
-                var json = new JavaScriptSerializer().Serialize(new SQLBackupAyarlar() { Server = cmb_Server.Text, Veritabani = cmb_Database.Text, ConnectionString = txt_Connection.Text, GorevCalismaZamani = lst_PlanlananSaatler.Items.Cast<String>().ToList().ToArray(), YedeklenmeLokasyonu = txt_YedeklenecekLokasyon.Text, SQLYedeklemeKlasoru = GetirSQLYedeklemeKlasoru(), WindowsAuthentication = chk_WindowsAuthentication.Checked, SQLKullaniciAdi = chk_WindowsAuthentication.Checked ? string.Empty : txt_KullaniciAdi.Text, SQLSifre = chk_WindowsAuthentication.Checked ? string.Empty : txt_Sifre.Text, UygulamaDili = cmb_UygulamaDili.Text == "Turkish" ? "tr-TR" : "en-US" });
+                var json = new JavaScriptSerializer().Serialize(new SQLBackupAyarlar() { Server = cmb_Server.Text, Veritabani = cmb_Database.Text, ConnectionString = txt_Connection.Text, GorevCalismaZamani = lst_PlanlananSaatler.Items.Cast<String>().ToList().ToArray(), YedeklenmeLokasyonu = txt_YedeklenecekLokasyon.Text, SQLYedeklemeKlasoru = GetirSQLYedeklemeKlasoru(), WindowsAuthentication = chk_WindowsAuthentication.Checked, SQLKullaniciAdi = chk_WindowsAuthentication.Checked ? string.Empty : txt_KullaniciAdi.Text, SQLSifre = chk_WindowsAuthentication.Checked ? string.Empty : txt_Sifre.Text, BilgisayarAcilisindaBaslat = chk_Windows_baslata_ekle.Checked, UygulamaDili = cmb_UygulamaDili.Text == "Turkish" ? "tr-TR" : "en-US" });
                 File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + "\\" + "Ayarlar.json", json);
                 Baslat();
             }
@@ -183,13 +192,9 @@ namespace SQLBackup
             {
                 Hide();
                 SQLYedek_Icon.Visible = true;
-                SQLYedek_Icon.Text = "SQL Kolay Yedekleme";
-                SQLYedek_Icon.BalloonTipText = "SQL Kolay Yedekleme Çalışıyor";
-                SQLYedek_Icon.BalloonTipIcon = ToolTipIcon.Info;
-                SQLYedek_Icon.ShowBalloonTip(2000);
+                SQLYedek_Icon.ShowBalloonTip(2000, Localization.SQLKolayYedekleme, Localization.SQLKolayYedeklemeClisiyor, ToolTipIcon.Info);
 
                 e.Cancel = true;
-
             }
         }
         private void frmSQLYedekleme_HelpButtonClicked(object sender, CancelEventArgs e)
@@ -202,6 +207,24 @@ namespace SQLBackup
         }
         private void cmb_UygulamaDili_SelectedValueChanged(object sender, EventArgs e)
         {
+            Localization.Culture = new CultureInfo(cmb_UygulamaDili.Text == "Turkish" ? "tr-TR" : "en-US");
+
+            this.Text = Localization.SQLKolayYedekleme;
+            lbl_YedeklemeKalanSure.Text = Localization.YedeklemeicinKalanSure;
+            lbl_Dil.Text = Localization.UygulamaDili;
+            lbl_VeritabaniSunucusu.Text = Localization.VeritabaniSunucusu;
+            lbl_Veritabani.Text = Localization.Veritabani;
+            chk_WindowsAuthentication.Text = Localization.WindowsAuthentication;
+            lbl_KullaniciAdi.Text = Localization.SQLKullaniciAdi;
+            lbl_Sifre.Text = Localization.SQLSifre;
+            lbl_PlanlananSaat.Text = Localization.PlanlananSaat;
+            lbl_PlanlanmisSaatler.Text = Localization.PlanlanmisSaatler;
+            lbl_SQLBaglanti.Text = Localization.SQLBaglanti;
+            lbl_YedeklenecekLokasyon.Text = Localization.YedeklenecekLokasyon;
+            chk_Windows_baslata_ekle.Text = Localization.WindowsBaslangicaEkle;
+            linkLabel_Katilim.Text = Localization.Destek;
+            btn_KaydetBaslat.Text = Localization.KaydetBaslat;
+            SQLYedek_Icon.Text = Localization.SQLKolayYedekleme;
 
         }
         private void btn_Kopyala_Click(object sender, EventArgs e)
@@ -211,7 +234,10 @@ namespace SQLBackup
 
         private void frmSQLYedekleme_Shown(object sender, EventArgs e)
         {
-            this.Hide();
+            if (timer_Zamanlayici.Enabled)
+                this.Close();
+
+
         }
 
         #endregion Eventler
@@ -233,6 +259,7 @@ namespace SQLBackup
                 chk_WindowsAuthentication.Checked = ayarlar.WindowsAuthentication;
                 txt_KullaniciAdi.Text = ayarlar.SQLKullaniciAdi;
                 txt_Sifre.Text = ayarlar.SQLSifre;
+                chk_Windows_baslata_ekle.Checked = ayarlar.BilgisayarAcilisindaBaslat;
 
                 string[] Database = ayarlar.Veritabani.Split(new[] { ", " }, StringSplitOptions.None);
                 if (Database != null && Database.Length > 0)
@@ -258,14 +285,6 @@ namespace SQLBackup
                 timer_Zamanlayici.Start();
 
             }
-
-            // Açılışta sağ alta kapalı kalması için
-            this.Close();
-
-            // Uygulamayı windows açılışına ekle
-            RegistryKey rk = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
-            if (rk.GetValue("SQLBackup") == null)
-                rk.SetValue("SQLBackup", Application.ExecutablePath);
         }
         private void BirSonrakiYedekleme()
         {
@@ -391,13 +410,13 @@ namespace SQLBackup
             return PlanlananSaatler[0];
         }
 
-        #endregion Methodlar
 
+        #endregion Methodlar
 
     }
 
     /// <summary>
-    /// Kullanıcın seçimlerini işleyebilmek için tanımlanan sınıf
+    /// Kullanıcın seçimlerini kayıt edebilmek için tanımlanan sınıf
     /// </summary>
     public class SQLBackupAyarlar
     {
@@ -411,5 +430,6 @@ namespace SQLBackup
         public string SQLKullaniciAdi { get; set; }
         public string SQLSifre { get; set; }
         public string UygulamaDili { get; set; }
+        public bool BilgisayarAcilisindaBaslat { get; set; }
     }
 }
